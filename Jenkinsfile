@@ -27,7 +27,7 @@ pipeline {
         
         stage('Call an sh file') {
             steps {
-                sh start-app.sh
+                sh './start-app.sh'
             }
         }
     }
