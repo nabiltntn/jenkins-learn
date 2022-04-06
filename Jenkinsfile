@@ -1,6 +1,14 @@
+// Complete guide is available here https://www.jenkins.io/doc/book/pipeline/syntax/
+
 pipeline {
     agent any
     
+    // how to triggers this pipeline ( with cron expression, etc )
+    triggers{
+        
+        // start this pipeline every 2 minutes
+        cron('H/2 * * * *')
+    }
     
     environment { 
         NODE_ENV = 'production'
