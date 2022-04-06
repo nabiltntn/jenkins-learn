@@ -27,7 +27,7 @@ pipeline {
         
         stage('Call an sh file') {
             environment { 
-                SOME_SPECIAL_ENV = credentials('A_GLOBAL_SECRET')
+                SOME_SPECIAL_ENV = credentials('A_GLOBAL_SECRET_ssssssss')
             }
             steps {
                 sh 'env'
