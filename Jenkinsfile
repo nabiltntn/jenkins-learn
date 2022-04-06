@@ -31,5 +31,15 @@ pipeline {
                 sh './start-app.sh'
             }
         }
+        stage('Test multiline') {
+            steps {
+                sh '''
+                echo "echo first line"
+                echo "second line again"
+                echo "third line again"
+                '''
+            }
+        }
+        
     }
 }
