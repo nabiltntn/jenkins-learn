@@ -19,5 +19,10 @@ pipeline {
                 sh "echo 'a hello world from the second step'"
             }
         }
+        stage('Display file content') {
+            steps {
+                sh "cat NOTES.txt"
+            }
+        }
     }
 }
