@@ -78,6 +78,8 @@ pipeline {
         }
         stage('Deploy to Production') {
             when {
+                // Before input to check condition before display input to avoid being blocked
+                beforeInput true
                 branch 'production'
             }
             // include a manual validation before continue in this step ( speciall for deploying in Poroduction )
