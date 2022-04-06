@@ -13,6 +13,22 @@ pipeline {
         timestamps()
     }
     
+    // add some params for the pipeline
+    
+    parameters {
+        string(name: 'TAG_VERSION', defaultValue: '', description: 'version tag to deploy')   
+        // other possibilities
+       
+        //text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+        //booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'ENV', choices: ['INT', 'ACC', 'PROD'], description: 'Destination environnement')
+
+        //password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
+    
+    
     stages {
         stage('Hello') {
             steps {
