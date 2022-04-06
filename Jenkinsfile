@@ -41,11 +41,13 @@ pipeline {
             }
         }
         
+        }        
         post {
             always {
                 sh "echo i wil alaways say a by message at the end"
+                sh "echo make call to outside application"
             }
         }
         
-    }
+
 }
