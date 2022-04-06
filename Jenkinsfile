@@ -45,6 +45,7 @@ pipeline {
         
         }        
         post {
+            // it's possible to have as much level as we want to trigger some process in certain cases
             always {
                 sh "echo i wil alaways say a by message at the end"
                 sh "echo make call to outside application"
