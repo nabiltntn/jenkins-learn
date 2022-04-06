@@ -37,6 +37,8 @@ pipeline {
                 echo "echo first line"
                 echo "second line again"
                 echo "third line again"
+                # force an exit code to test displaying the post message in any case
+                exit 1
                 '''
             }
         }
