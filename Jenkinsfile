@@ -76,7 +76,10 @@ pipeline {
                 archiveArtifacts artifacts: 'result.txt', fingerprint: true
             }
         }
-        stage('Test multiline') {
+        stage('Deploy to Production') {
+            when {
+                branch 'production'
+            }
             // include a manual validation before continue in this step ( speciall for deploying in Poroduction )
             input {
                 message "Are you sure to deploy in Production"
