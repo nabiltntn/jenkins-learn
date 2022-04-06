@@ -4,13 +4,10 @@ pipeline {
     agent any
     
     // how to triggers this pipeline ( with cron expression, pollSCM cron and check if changes to restart , uppstream : impacted  )
-    triggers{
-        
+    //triggers{
         // start this pipeline every 2 minutes
-        //cron('H/2 * * * *')
-        
-        
-    }
+        //cron('H/2 * * * *')  
+    //}
     
     environment { 
         NODE_ENV = 'production'
