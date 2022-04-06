@@ -35,6 +35,7 @@ pipeline {
                 sh "echo 'Hello World'"
                 sh "env"
                 sh "ls"
+                sh "echo i will do a build in ${params.ENV} with version ${params.TAG_VERSION}"
             }
         }
         stage('Second stage') {
