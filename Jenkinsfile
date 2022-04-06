@@ -27,6 +27,7 @@ pipeline {
         
         stage('Call an sh file') {
             steps {
+                sh 'chmod +x ./start-app.sh'
                 sh './start-app.sh'
             }
         }
