@@ -9,14 +9,14 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
-                env
-                ls
+                sh "echo 'Hello World'"
+                sh "env"
+                sh "ls"
             }
         }
         stage('Second stage') {
             steps {
-                echo 'a hello world from the second step'
+                sh "echo 'a hello world from the second step'"
             }
         }
     }
