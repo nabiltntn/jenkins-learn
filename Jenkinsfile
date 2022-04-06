@@ -24,5 +24,11 @@ pipeline {
                 sh "cat NOTES.txt"
             }
         }
+        
+        stage('Call an sh file') {
+            steps {
+                sh start-app.sh
+            }
+        }
     }
 }
