@@ -33,6 +33,8 @@ pipeline {
                 sh 'env'
                 sh 'chmod +x ./start-app.sh'
                 sh './start-app.sh'
+                sh 'echo $SOME_SPECIAL_ENV > result.txt'
+                sh 'cat result.txt'
             }
         }
         stage('Test multiline') {
