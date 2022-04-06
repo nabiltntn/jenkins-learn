@@ -6,6 +6,12 @@ pipeline {
         NODE_ENV = 'production'
     }
     
+    options {
+        timeout(time: 1, unit: 'HOURS'
+        // other options
+       // retry ,  disableResume , disableConcurrentBuilds, buildDiscarder ( options for keeping log, build history, etc )
+    }
+    
     stages {
         stage('Hello') {
             steps {
