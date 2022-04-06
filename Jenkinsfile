@@ -26,7 +26,11 @@ pipeline {
         }
         
         stage('Call an sh file') {
+            environment { 
+                SOME_SPECIAL_ENV = 'top_secret'
+            }
             steps {
+                sh 'env'
                 sh 'chmod +x ./start-app.sh'
                 sh './start-app.sh'
             }
