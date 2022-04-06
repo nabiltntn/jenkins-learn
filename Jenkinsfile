@@ -77,6 +77,11 @@ pipeline {
             }
         }
         stage('Test multiline') {
+            // include a manual validation before continue in this step ( speciall for deploying in Poroduction )
+            input {
+                message "Are you sure to deploy in Production"
+                ok "Yes, we should."
+            }
             steps {
                 sh '''
                 echo "echo first line"
