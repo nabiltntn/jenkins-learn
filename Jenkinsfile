@@ -35,6 +35,8 @@ pipeline {
                 sh './start-app.sh'
                 sh 'echo $SOME_SPECIAL_ENV > result.txt'
                 sh 'cat result.txt'
+                // Use this instruction to save some files are pipeline artifact
+                archiveArtifacts artifacts: 'result.txt', fingerprint: true
             }
         }
         stage('Test multiline') {
