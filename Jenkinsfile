@@ -49,6 +49,10 @@ pipeline {
                 sh "echo i wil alaways say a by message at the end"
                 sh "echo make call to outside application"
             }
+            
+            failure {
+                sh "make special call when error happens"
+            }
         }
         
 
