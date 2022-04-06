@@ -38,7 +38,7 @@ pipeline {
                 echo "second line again"
                 echo "third line again"
                 # force an exit code to test displaying the post message in any case
-                # exit 1
+                exit 1
                 '''
             }
         }
@@ -51,7 +51,7 @@ pipeline {
             }
             
             failure {
-                sh "make special call when error happens"
+                sh 'echo "make special call when error happens"'
             }
         }
         
