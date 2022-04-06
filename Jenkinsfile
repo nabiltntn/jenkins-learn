@@ -7,9 +7,10 @@ pipeline {
     }
     
     options {
-        timeout(time: 1, unit: 'HOURS'
+        timeout(time: 1, unit: 'HOURS')
         // other options
-       // retry ,  disableResume , disableConcurrentBuilds, buildDiscarder ( options for keeping log, build history, etc )
+        // retry ,  disableResume , disableConcurrentBuilds, buildDiscarder ( options for keeping log, build history, etc )
+        timestamps()
     }
     
     stages {
