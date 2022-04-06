@@ -13,6 +13,11 @@ pipeline {
         NODE_ENV = 'production'
     }
     
+    
+    tools {
+        maven 'maven-3-8-5' 
+    }
+    
     options {
         timeout(time: 1, unit: 'HOURS')
         // other options
@@ -43,6 +48,7 @@ pipeline {
                 sh "env"
                 sh "ls"
                 sh "echo i will do a build in ${params.ENV} with version ${params.TAG_VERSION}"
+                sh "mvn --version"
             }
         }
         stage('Second stage') {
