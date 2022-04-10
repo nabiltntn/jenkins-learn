@@ -17,8 +17,11 @@ spec:
         }
     }
     stages {
-        stage('Main') {
+        stage('Create-file') {
             steps {
+             container('shell') {
+                sh 'echo hello > result.txt'
+             }
              container('shell') {
                 sh 'echo hello > result.txt'
                 archiveArtifacts artifacts: 'result.txt', fingerprint: true
