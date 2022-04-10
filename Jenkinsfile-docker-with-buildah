@@ -34,6 +34,7 @@ spec:
         container('buildah') {
           // Buildah is a container defined in the agent Kubernetes pod
           sh 'buildah build -t nabiltntn/jenkins-example-buildah:8.5-230 .'
+          sh 'buildah images'
         }
       }
     }
