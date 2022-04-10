@@ -1,1 +1,1 @@
-from node:lts-alpine3.15
+from docker.io/node:lts-alpine3.15
