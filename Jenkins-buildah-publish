@@ -75,7 +75,7 @@ spec:
   post {
       always {
           container('buildah') {
-            sh "buildah logout"
+            sh "buildah logout --all"
           }
       }
     }
