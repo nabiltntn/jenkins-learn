@@ -66,8 +66,8 @@ spec:
       steps {
         container('buildah') {
           // Publish
-          sh 'buildah publish nabiltntn/jenkins-example-buildah:8.5-230'
-          sh 'buildah publish nabiltntn/jenkins-example-buildah:latest'
+          sh 'buildah push nabiltntn/jenkins-example-buildah:8.5-230'
+          sh 'buildah push nabiltntn/jenkins-example-buildah:latest'
         }
       }
     }
