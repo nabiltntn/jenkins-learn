@@ -53,5 +53,30 @@ spec:
         }
       }
     }
+    
+    stage('tag image') {
+      steps {
+        container('buildah') {
+          sh 'buildah tag nabiltntn/jenkins-example-buildah:8.5-230 nabiltntn/jenkins-example-buildah:latest'
+        }
+      }
+    }
+    
+    stage('Publish image to Dockerhub') {
+      steps {
+        container('buildah') {
+          // Publish
+          sh 'buildah publish nabiltntn/jenkins-example-buildah:8.5-230'
+          sh 'buildah publish nabiltntn/jenkins-example-buildah:latest'
+        }
+      }
+    }
   }
+  post {
+      always {
+          container('buildah') {
+            sh "buildah logout"
+          }
+      }
+    }
 }
